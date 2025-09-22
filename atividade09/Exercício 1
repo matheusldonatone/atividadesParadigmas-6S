@@ -23,3 +23,21 @@ void dobrarReferencia(int *x) {
 
     return 0;
 }
+
+Questões:
+- Qual a diferença observada entre as duas versões?
+ Na versão por valor, a variável original não é alterada. Já na versão por referência, o valor é realmente dobrado.
+
+
+- Por que o valor da variável só se altera na versão por referência?
+ Porque na passagem por valor o programa cria uma cópia da variável, e a alteração ocorre apenas nessa cópia. Na passagem por referência, passamos o endereço da variável, permitindo alterar diretamente o valor na memória original.
+
+
+- Relacione essa diferença com as estratégias de passagem de parâmetros discutidas no Capítulo 9.
+
+
+Por valor: seguro, mas não altera a variável original.
+
+
+Por referência: eficiente quando precisamos modificar o valor original ou trabalhar com grandes estruturas de dados.
+ Isso ilustra bem o que o Capítulo 9 descreve sobre o impacto da estratégia de passagem de parâmetros.
