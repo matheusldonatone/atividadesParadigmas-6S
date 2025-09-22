@@ -1,0 +1,8 @@
+- O que acontece com a ordem das mensagens exibidas?
+As mensagens ficam intercaladas, mas a ordem exata pode variar a cada execução, porque depende do agendador de Go.
+
+- Por que as mensagens da corrotina e da função normal se intercalam?
+Porque a corrotina (go escrever) é executada concorrentemente junto com a função principal. Enquanto a principal escreve, a corrotina também é executada pelo runtime, dividindo o tempo de CPU.
+
+- Relacione esse comportamento com a definição de **corrotinas** estudada no Capítulo 9.
+Corrotinas são rotinas que podem suspender e retomar sua execução, permitindo concorrência leve. No Go, isso é implementado com goroutines, que são gerenciadas pelo próprio runtime, tornando simples a execução paralela sem precisar de threads explícitas.
