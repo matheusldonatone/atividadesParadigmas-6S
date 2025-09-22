@@ -1,0 +1,25 @@
+// Função por valor
+void dobrarValor(int x) {
+    x = x * 2;
+    printf("Dentro da função (por valor): %d\n", x);
+}
+
+// Função por referência 
+void dobrarReferencia(int *x) {
+    *x = (*x) * 2;
+
+	int main() {
+    int num = 10;
+
+    printf("Valor inicial: %d\n", num);
+
+    // Chamada por valor
+    dobrarValor(num);
+    printf("Após chamada por valor: %d\n\n", num);
+
+    // Chamada por referência
+    dobrarReferencia(&num);
+    printf("Após chamada por referência: %d\n", num);
+
+    return 0;
+}
