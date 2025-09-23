@@ -1,0 +1,69 @@
+Código em C:
+  #include <stdio.h>
+  
+  int main() {
+      int numeros[5] = {1, 2, 3, 4, 5};
+  
+      for (int i = 0; i < 5; i++) {
+          printf("%d ", numeros[i]);
+      }
+      return 0;
+  }
+  
+  struct Livro {
+      char titulo[50];
+      char autor[50];
+      int anoPublicacao;
+  };
+  
+  int main() {
+      struct Livro livro1 = {"Dom Casmurro", "Machado de Assis", 1899};
+  
+      printf("Título: %s\n", livro1.titulo);
+      printf("Autor: %s\n", livro1.autor);
+      printf("Ano: %d\n", livro1.anoPublicacao);
+  
+      return 0;
+  }
+
+Código em Java:
+  import java.util.ArrayList;
+
+  class Livro {
+      String titulo;
+      String autor;
+      int anoPublicacao;
+  
+      Livro(String titulo, String autor, int ano) {
+          this.titulo = titulo;
+          this.autor = autor;
+          this.anoPublicacao = ano;
+      }
+  }
+  
+  public class Main {
+      public static void main(String[] args) {
+          ArrayList<Livro> livros = new ArrayList<>();
+  
+          livros.add(new Livro("Dom Casmurro", "Machado de Assis", 1899));
+          livros.add(new Livro("Memórias Póstumas de Brás Cubas", "Machado de Assis", 1881));
+          livros.add(new Livro("Capitães da Areia", "Jorge Amado", 1937));
+  
+          for (Livro l : livros) {
+              System.out.println(l.titulo);
+          }
+      }
+  }
+
+Saída:
+  Dom Casmurro
+  Memórias Póstumas de Brás Cubas
+  Capitães da Areia
+
+ Perguntas para reflexão:
+ • Qual a diferença entre um array e um registro/objeto?
+  r: Array: homogêneo (mesmo tipo de dados). Bom para listas simples e operações matemáticas.
+Struct: heterogêneo (diferentes tipos em um mesmo objeto). Ideal para representar entidades mais complexas (ex.: livro com título, autor, ano).
+ • Quando seria mais adequado usar array e quando usar struct/classe?
+  r: Array → quando os dados são simples e homogêneos.
+Struct/Classe → quando precisamos de registros/objetos com atributos diferentes.
