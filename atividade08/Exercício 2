@@ -1,0 +1,74 @@
+1. Implemente esse menu em **C** utilizando switch/case.
+  #include <stdio.h>
+
+int fatorial(int n) {
+    int fat = 1;
+    for (int i = 1; i <= n; i++) {
+        fat *= i;
+    }
+    return fat;
+}
+
+int main() {
+    int opcao, num;
+
+    do {
+        printf("\nMenu:\n");
+        printf("1. Calcular quadrado de um número\n");
+        printf("2. Calcular fatorial de um número\n");
+        printf("3. Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                printf("Digite um número: ");
+                scanf("%d", &num);
+                printf("Quadrado: %d\n", num * num);
+                break;
+            case 2:
+                printf("Digite um número: ");
+                scanf("%d", &num);
+                printf("Fatorial: %d\n", fatorial(num));
+                break;
+            case 3:
+                printf("Saindo...\n");
+                break;
+            default:
+                printf("Opção inválida!\n");
+        }
+    } while (opcao != 3);
+
+    return 0;
+  }
+
+2. Implemente o mesmo menu em **Python**, utilizando apenas if/elif/else.
+  def fatorial(n):
+    fat = 1
+    for i in range(1, n + 1):
+        fat *= i
+    return fat
+
+  while True:
+    print("\nMenu:")
+    print("1. Calcular quadrado de um número")
+    print("2. Calcular fatorial de um número")
+    print("3. Sair")
+    opcao = int(input("Escolha: "))
+
+    if opcao == 1:
+        num = int(input("Digite um número: "))
+        print("Quadrado:", num * num)
+    elif opcao == 2:
+        num = int(input("Digite um número: "))
+        print("Fatorial:", fatorial(num))
+    elif opcao == 3:
+        print("Saindo...")
+        break
+    else:
+        print("Opção inválida!")
+
+3. Execute os dois programas e compare as soluções em relação à clareza e quantidade de código.
+  Python é mais simples para esse tipo de menu, pois exige menos código e fica mais próximo da linguagem natural.
+
+4. Escreva um comentário final destacando em qual linguagem foi mais simples de implementar e justificar o motivo.
