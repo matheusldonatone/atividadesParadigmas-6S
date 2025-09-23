@@ -1,0 +1,24 @@
+Código em Java:
+  public class Main {
+      public static void main(String[] args) {
+          int num = 10;
+          // num = "dez"; // Erro: tipos incompatíveis
+          System.out.println(num + 5); // funciona -> 15
+      }
+  }
+
+Resultado: O Java não permite atribuir string a um int, gera erro de compilação.
+
+Código em Python:
+  num = 10
+  print(num + 5)  # 15
+  
+  num = "dez"
+
+Perguntas para reflexão:
+ • Por que o Java não permite essa operação e o Python permite?
+  r: Java (tipagem estática): detecta erro em tempo de compilação, aumenta a segurança mas é menos flexível.
+  Python (tipagem dinâmica): flexível, mas erros podem surgir apenas em tempo de execução.
+ • Quais as vantagens e desvantagens de cada abordagem?
+  r: Vantagem estática: mais segurança.
+  Vantagem dinâmica: mais flexibilidade e rapidez de escrita.
