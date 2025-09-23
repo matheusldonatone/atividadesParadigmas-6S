@@ -1,0 +1,31 @@
+Código em Python:
+  x = 10  # variável global
+  
+  def f():
+      print("x em f():", x)
+  
+  def g():
+      x = 20
+      f()
+  
+  g()
+
+Código em JavaScript:
+  let x = 10; // variável global
+  
+  function f() {
+      console.log("x em f():", x);
+  }
+  
+  function g() {
+      let x = 20;
+      f();
+  }
+  
+  g();
+
+Perguntas para reflexão:
+ • O valor impresso depende do local de definição ou do local de chamada da função?
+  r: O valor impresso depende do local de definição da função (f foi definida no escopo onde x = 10), e não de onde foi chamada.
+ • Qual linguagem se comporta como escopo estático e qual se aproxima de dinâmico?
+  r: Tanto Python quanto JavaScript usam escopo estático. Se fosse escopo dinâmico, f pegaria o x = 20 dentro de g.
