@@ -1,0 +1,19 @@
+1. Escreva um programa que percorra uma lista de números inteiros e: - Pare imediatamente a execução ao encontrar o número 0 (break). - Pule os números negativos sem processá-los (continue). - Retorne o dobro do primeiro número par encontrado (return).
+  def processar(lista):
+      for num in lista:
+          if num == 0:
+              print("Encontrado 0, parando execução.")
+              break
+          if num < 0:
+              continue
+          if num % 2 == 0:
+              return num * 2
+  
+  # Exemplo de uso
+  numeros = [5, -3, 7, -1, 4, 9, 0, 6]
+  resultado = processar(numeros)
+  print("Resultado:", resultado)
+
+2. Comente sobre como seria a implementação desse mesmo programa utilizando apenas goto e rótulos, destacando as vantagens da abordagem moderna.
+  Se fosse implementado com goto, precisaríamos criar rótulos para cada caso. Isso deixaria o código confuso, cheio de desvios e difícil de manter;
+  Com break, continue e return, o fluxo fica claro e direto, sem necessidade de “pulos manuais”. A abordagem moderna é muito mais legível, organizada e menos propensa a erros.
